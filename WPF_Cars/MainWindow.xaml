@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Cars"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="550" Width="850">
+    <TabControl>
+        <TabItem Header="Каталог производителей">
+            <WrapPanel x:Name="WrapCatalogCars">
+            </WrapPanel>
+        </TabItem>
+        <TabItem Header="VIN-номер">
+            
+        </TabItem>
+        <TabItem Header="Номер детали"></TabItem>
+    </TabControl>
 </Window>
