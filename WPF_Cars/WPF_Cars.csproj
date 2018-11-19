@@ -67,8 +67,22 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\Cars.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Tab1_MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\Cars.xaml.cs">
+      <DependentUpon>Cars.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Tab1_MainPage.xaml.cs">
+      <DependentUpon>Tab1_MainPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -94,6 +108,42 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="png\abarth.png" />
+    <Resource Include="png\alfa romeo.png" />
+    <Resource Include="png\audi.png" />
+    <Resource Include="png\bmw.png" />
+    <Resource Include="png\chevrolet.png" />
+    <Resource Include="png\chrysler.png" />
+    <Resource Include="png\citroen.png" />
+    <Resource Include="png\dacia.png" />
+    <Resource Include="png\dodge.png" />
+    <Resource Include="png\fiat professional.png" />
+    <Resource Include="png\fiat.png" />
+    <Resource Include="png\ford.png" />
+    <Resource Include="png\honda.png" />
+    <Resource Include="png\infiniti.png" />
+    <Resource Include="png\isuzu.png" />
+    <Resource Include="png\jeep.png" />
+    <Resource Include="png\kia.png" />
+    <Resource Include="png\lancia.png" />
+    <Resource Include="png\landrover.png" />
+    <Resource Include="png\lexus.png" />
+    <Resource Include="png\mazda.png" />
+    <Resource Include="png\mercedes-benz.png" />
+    <Resource Include="png\mitsubishi.png" />
+    <Resource Include="png\nissan.png" />
+    <Resource Include="png\opel.png" />
+    <Resource Include="png\peugeot.png" />
+    <Resource Include="png\porsche.png" />
+    <Resource Include="png\ram.png" />
+    <Resource Include="png\renault.png" />
+    <Resource Include="png\seat.png" />
+    <Resource Include="png\skoda.png" />
+    <Resource Include="png\smart.png" />
+    <Resource Include="png\ssangyong.png" />
+    <Resource Include="png\subaru %281%29.png" />
+    <Resource Include="png\volvo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

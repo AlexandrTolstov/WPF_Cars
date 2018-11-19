@@ -12,22 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.IO;
-using System.Collections;
 
-namespace WPF_Cars
+namespace WPF_Cars.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Cars.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Cars : Page
     {
-        public static Frame mf { get; set; }
-        public MainWindow()
+        public Cars()
         {
             InitializeComponent();
-            mf = MainFrame;
-            MainFrame.Source = new Uri("Pages/Tab1_MainPage.xaml", UriKind.RelativeOrAbsolute);
         }
     }
 }
