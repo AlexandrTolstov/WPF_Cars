@@ -23,6 +23,7 @@ namespace WPF_Cars.Pages
         public Cars()
         {
             InitializeComponent();
+            LogoImage.Source = new BitmapImage(new Uri(MainWindow.ListOfCars[MainWindow.TagCars].Path, UriKind.RelativeOrAbsolute));
         }
     }
 }

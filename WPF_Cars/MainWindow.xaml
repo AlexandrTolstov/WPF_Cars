@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Cars"
         mc:Ignorable="d"
-        Title="MainWindow" Height="550" Width="850">
+        Title="MainWindow" Height="450" Width="1000">
     <TabControl>
         <TabItem Header="Каталог производителей">
             <Frame Grid.Row="1"
@@ -16,10 +16,205 @@
             </Frame>
         </TabItem>
         <TabItem Header="VIN-номер">
-            <StackPanel>
-                <TextBox x:Name="TextBox1"></TextBox>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" MinHeight="80"></RowDefinition>
+                    <RowDefinition Height="3*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <StackPanel Margin="10"
+                            Grid.Column="0"
+                            Grid.Row="0">
+                    <Label Margin="5 0 0 0">Введите VIN (17 знаков), например: JTMHT05J5044090</Label>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="60"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBox Grid.Column="0" 
+                                     Margin="10 0 5 15" 
+                                     VerticalAlignment="Center"
+                                     Height="22"
+                                     Text="JTMHT05J5044090">
+                            <TextBox.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="3"/>
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
+                        <Button Grid.Column="1"
+                                    Height="25"
+                                    VerticalAlignment="Top"
+                                    Margin="0 0 10 0"
+                                    Content="Найти">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="3"/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1"
+                            Grid.Row="0"
+                            Margin="10"
+                            Orientation="Vertical">
+                    <Label Margin="5 0 0 0">Введите код и номер кузова, например CK2A-0403374:</Label>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="15"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="60"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBox Grid.Column="0" 
+                                     Margin="10 0 0 15" 
+                                     VerticalAlignment="Top"
+                                     Height="22"
+                                     Text="CK2A">
+                            <TextBox.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="3"/>
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
+                        <Label Grid.Column="1" Margin="0 0 0 15">-</Label>
+                        <TextBox Grid.Column="2" 
+                                     Margin="0 0 5 15" 
+                                     VerticalAlignment="Top"
+                                     Height="22"
+                                     Text="0403374">
+                            <TextBox.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="3"/>
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
+                        <Button Grid.Column="3"
+                                    Height="25"
+                                    VerticalAlignment="Top"
+                                    Margin="0 0 10 0"
+                                    Content="Найти">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="3"/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+
+                <Grid Grid.Column="0" Grid.Row="1" Margin="20 0 20 40">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"></ColumnDefinition>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="2"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Background="#6A5ACD"></Label>
+                    <Label Grid.Column="1" FontSize="100" FontStyle="Oblique"  Foreground="#6A5ACD">"</Label>
+                    <FlowDocumentScrollViewer Grid.Column="2" Margin="15 0 0 15">
+                        <FlowDocument FontSize="12" FontFamily="Serif" Foreground="Gray">
+                            <Paragraph>
+                                <Bold Foreground="#6A5ACD">Vehicl Identification Number</Bold>
+                                - Идентификационный номер транспортного средства (англ. Vehicle identification number, VIN)
+                                — уникальный код транспортного средства, состоящий из 17 знаков. В коде представлены 
+                                сведения о производителе и характеристиках транспортного средства, а также о 
+                                годе выпуска. Строение кода основано на стандартах ISO 3779-1983 и ISO 3780. 
+                                Идентификационные номера наносятся на неразъёмных частях кузова или шасси и 
+                                на особо изготовленных номерных табличках (шильдиках).
+                            </Paragraph>
+                        </FlowDocument>
+                    </FlowDocumentScrollViewer>
+                    <Label Background="#6A5ACD" Grid.Column="3"></Label>
+                </Grid>
+
+                <Grid Grid.Column="1" Grid.Row="1" Margin="20 0 20 40">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"></ColumnDefinition>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="2"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Background="#6A5ACD"></Label>
+                    <Label Grid.Column="1" FontSize="100" FontStyle="Oblique"  Foreground="#6A5ACD">"</Label>
+                    <FlowDocumentScrollViewer Grid.Column="2" Margin="15 0 0 15">
+                        <FlowDocument FontSize="12" FontFamily="Serif" Foreground="Gray">
+                            <Paragraph>
+                                <Bold Foreground="#6A5ACD">Vehicl Identification Number</Bold>
+                                Номер кузова - указывается в техпаспорте (СРТС) с обратной стороны документа, 
+                                где нет печати, шестая строка сверху. Состоит он из букв и цифр и обычно содержит 
+                                около 10 знаков. На автомашине номер кузова обычно выбивается на металлической 
+                                табличке под капотом. При этом у разных марок авто эта табличка может располагаться 
+                                в совершенно разных местах. К примеру, у некоторых моделей Suzuki номер кузова 
+                                выбит в колёсной арке над правым колесом.
+                            </Paragraph>
+                        </FlowDocument>
+                    </FlowDocumentScrollViewer>
+                    <Label Background="#6A5ACD" Grid.Column="3"></Label>
+                </Grid>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Номер детали">
+            <StackPanel Orientation="Vertical">
+                <Label Margin="5 0 0 0">Для выполнения поиска введите номер детали, например 1002101:</Label>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="60"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Grid.Column="0" 
+                                     Margin="10 0 5 15" 
+                                     VerticalAlignment="Center"
+                                     Height="22"
+                                     Text="Номер детали">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="3"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                    <Button Grid.Column="1"
+                                    Height="25"
+                                    VerticalAlignment="Top"
+                                    Margin="0 0 10 0"
+                                    Content="Найти">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="3"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </Grid>
+
+                <Grid Margin="20 0 20 40">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"></ColumnDefinition>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="2"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Background="#6A5ACD"></Label>
+                    <Label Grid.Column="1" FontSize="100" FontStyle="Oblique"  Foreground="#6A5ACD">"</Label>
+                    <FlowDocumentScrollViewer Grid.Column="2" Margin="15 0 0 15">
+                        <FlowDocument FontSize="12" FontFamily="Serif" Foreground="Gray">
+                            <Paragraph>
+                                <Bold Foreground="#6A5ACD">Vehicl Identification Number</Bold>
+                                Код детали (артикул) — маркировка завода-изготовителя, однозначно 
+                                идентифицирующая деталь автомобиля. Маркировку можно найти на детали, 
+                                на упаковке или в сопроводительной документации, если на детали по 
+                                какой либо причине нанесение номера невозможно.
+                            </Paragraph>
+                        </FlowDocument>
+                    </FlowDocumentScrollViewer>
+                    <Label Background="#6A5ACD" Grid.Column="3"></Label>
+                </Grid>
             </StackPanel>
         </TabItem>
-        <TabItem Header="Номер детали"></TabItem>
     </TabControl>
 </Window>

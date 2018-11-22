@@ -23,6 +23,10 @@ namespace WPF_Cars
     public partial class MainWindow : Window
     {
         public static Frame mf { get; set; }
+
+        public static List<CarsInfo> ListOfCars;
+        public static int TagCars = 0;
+
         public MainWindow()
         {
             InitializeComponent();

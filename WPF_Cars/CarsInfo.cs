@@ -13,7 +13,7 @@ namespace WPF_Cars
         public CarsInfo(string name)
         {
             Name = name.Remove(name.Length - 4);
-            Path = AppDomain.CurrentDomain.BaseDirectory + "png/" + name;
+            Path = AppDomain.CurrentDomain.BaseDirectory + @"png\" + name;
         }
     }
 }

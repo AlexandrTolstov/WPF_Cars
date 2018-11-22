@@ -10,6 +10,7 @@
 
     <Grid>
         <WrapPanel x:Name="WrapCatalogCars">
+            <!--<TextBox x:Name="CarsNameText"></TextBox>-->
         </WrapPanel>
     </Grid>
 </Page>
